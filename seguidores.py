@@ -147,12 +147,11 @@ def get_following(driver, username):
     time.sleep(5)
 
     # === ⭐ POSIBLE XPATH DIFERENTE AL DE FOLLOWERS ⭐ ===
-    # ESTE XPATH ES EL MISMO QUE USAS EN FOLLOWERS.
-    # SI NO FUNCIONA, NECESITO QUE ME PASES EL XPATH REAL DEL MODAL DE SEGUIDOS.
+    # ESTE XPATH ES EL MISMO QUE USA EN FOLLOWERS.
     following_xpath = '/html/body/div[4]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]'
 
     # === ⭐ POSIBLE CLASE DIFERENTE QUE FOLLOWERS ⭐ ===
-    # ESTA ES LA MISMA QUE USAS EN FOLLOWERS
+    # ESTA ES LA MISMA QUE USA EN FOLLOWERS
     cuentas = '_ap3a._aaco._aacw._aacx._aad7._aade'
 
     # Detecta el contenedor scrollable
@@ -215,4 +214,5 @@ if __name__ == "__main__":
     excel_file = save_to_excel(followers, "seguidores")
     followings = get_following(driver, username)
     excel_file = save_to_excel(followings, "seguidos", followers)
+
     input("Presiona Enter para cerrar el navegador...")
